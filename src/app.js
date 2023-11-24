@@ -82,3 +82,44 @@ ReactDOM.render(
   document.getElementById("root"),
 );
 //use method one or method two or three to definie your variables
+
+//CREATING A REACT APPLICATION FOR ASCERTAINING THE CURRENT YEAR OR DATE
+const cname = "Tobi";
+// displaying a current date
+let today = new Date().toISOString().slice(0, 4);
+// alternative method
+const time = new Date();
+const year = time.getFullYear();
+const date = time.getDate();
+const bmonth = time.getMonth();
+const month = bmonth + 1;
+
+// alternative month
+var m_names = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+var n = m_names[time.getMonth()];
+
+ReactDOM.render(
+  <div>
+    <p>Creadted by {cname}</p>
+    <p>Copyright by {today}</p>
+    <p>
+      Today's date is {n}({month}) {`${date}  ${year}`}.
+    </p>
+  </div>,
+  document.getElementById("root"),
+);
+console.log(n);
