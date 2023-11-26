@@ -10,3 +10,15 @@ body {
   font-size:72px;
   }
   
+  .heading{
+    color: blueviolet;
+  }
+
+.headings{
+  color: red;
+}
+.food-img{
+  height: 200px;
+  width: 200px;
+}
+  

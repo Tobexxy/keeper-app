@@ -123,3 +123,42 @@ ReactDOM.render(
   document.getElementById("root"),
 );
 console.log(n);
+
+//Styling in jsk react and a more practical mway of using render
+//contentEditable makes the text in the h1 slot to be editable#
+//NOTE: when writing attributes in html change it to camelcasing
+const myHtml = (
+  <div>
+    <h1 className="heading" contentEditable="true" spellcheck="true">
+      Hello Tobi
+    </h1>
+    <ul>
+      <b>
+        <li>Zainab</li>
+        <li>Zee</li>
+        <li>Sully</li>
+      </b>
+    </ul>
+    <p> This is just a simple text</p>
+  </div>
+);
+
+const rootID = ReactDOM.createRoot(document.getElementById("root"));
+rootID.render(myHtml);
+
+//styling images in react jsk
+const imgUrl = "https://picsum.photos/200";
+const myimg = (
+  <div>
+    <h1 className="headings" contentEditable="false" spellcheck="true">
+      url images
+    </h1>
+    <br />
+    <img  className = "food-img"src={imgUrl + "?grayscale"} />
+    <img  className = "food-img"src={imgUrl} />
+    <img  className = "food-img"src={imgUrl + "?grayscale"} />
+  </div>
+);
+
+const imgid = ReactDOM.createRoot(document.getElementById("root"));
+imgid.render(myimg);
