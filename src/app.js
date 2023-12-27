@@ -146,19 +146,36 @@ const myHtml = (
 const rootID = ReactDOM.createRoot(document.getElementById("root"));
 rootID.render(myHtml);
 
+// ADDING CUSTOM STYLES TO CSS PROPERTIES IN JSX
+const customStyle = {
+  color: "red",
+  fontSize: "10px",
+  border: "1px solid black",
+};
+
+//UPDATING STYLES IN JSX
+customStyle.color = "black";
+customStyle.fontSize = "30px";
+
 //styling images in react jsk
 const imgUrl = "https://picsum.photos/200";
 const myimg = (
   <div>
-    <h1 className="headings" contentEditable="false" spellcheck="true">
+    <h1
+      className="heading"
+      contentEditable="true"
+      spellCheck="true"
+      style={customStyle}
+    >
       url images
     </h1>
     <br />
-    <img  className = "food-img"src={imgUrl + "?grayscale"} />
-    <img  className = "food-img"src={imgUrl} />
-    <img  className = "food-img"src={imgUrl + "?grayscale"} />
+    <img className="food-img" src={imgUrl + "?grayscale"} />
+    <img className="food-img" src={imgUrl} />
+    <img className="food-img" src={imgUrl} />
   </div>
 );
 
 const imgid = ReactDOM.createRoot(document.getElementById("root"));
 imgid.render(myimg);
+
