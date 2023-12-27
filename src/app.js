@@ -179,3 +179,37 @@ const myimg = (
 const imgid = ReactDOM.createRoot(document.getElementById("root"));
 imgid.render(myimg);
 
+//time project that changes color with morning Afternoon and night
+const datee = new Date(); // shows everything e.g "Wed Dec 27 2023 04:03:01 GMT+0000 (Greenwich Mean Time) 2023", customize it with this "Date(2019, 1, 1, 18, 23)"
+const years = datee.getFullYear();
+const times = datee.getHours();
+const min = datee.getMinutes();
+
+let greetings;
+
+const styleColor = {
+  color: "",
+};
+
+if (times < 12) {
+  greetings = "Good Morning!";
+  styleColor.color = "green";
+} else if (times < 18) {
+  greetings = "Good Afternoon!";
+  styleColor.color = "red";
+} else {
+  greetings = "Good Night!";
+  styleColor.color = "blue";
+}
+
+const myStyles = (
+  <div>
+    <h1 style={styleColor} className="heading">
+      {greetings}
+    </h1>
+    <p className="fonts">{times + ":" + min}</p>
+  </div>
+);
+const styleId = ReactDOM.createRoot(document.getElementById("root"));
+styleId.render(myStyles);
+console.log(times);
