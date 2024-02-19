@@ -13,7 +13,17 @@ const texts = [
         id: 3,
         title: "Enjoy life",
         content: "Be more out extroverted"
-    }
+    },
+    {
+        id: 4,
+        title: "Seun",
+        content: "who eat my burger"
+    },
+    {
+        id: 5,
+        title: "yemi",
+        content: "Food monger"
+    },
 ]
 
 export default texts;
